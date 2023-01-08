@@ -51,6 +51,12 @@ header {
   font-weight: 700;
   color: var(--logo-color);
 }
+
+/* .buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+} */
 .hamburger {
   position: relative;
   z-index: 10;

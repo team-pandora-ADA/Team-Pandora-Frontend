@@ -1,214 +1,235 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --bg-color:#FFFFFF;
-    --logo-color: #6081AB;
-    --footer-color:#D9D9D9;
+  --bg-color: #ffffff;
+  --logo-color: #6081ab;
+  --footer-color: #d9d9d9;
 }
 
-html, body {
-    font-size: 62.5%;
-    background-color: var(--bg-color);
+html,
+body {
+  font-size: 62.5%;
+  background-color: var(--bg-color);
 }
 
 /*UTILS*/
 .mb-md {
-    margin-bottom: 5rem;
+  margin-bottom: 5rem;
 }
 
 /*HEADER AND NAVIGATION*/
 header {
-    padding: 5rem 5rem 0rem 5rem;
+  padding: 5rem 5rem 0rem 5rem;
 }
 
 .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo-img {
-    width: 323px;
-    height: 83px;
+  width: 323px;
+  height: 83px;
 }
 
 .navigation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
 }
 
 .nav-text {
-    font-family: 'Lato', sans-serif;
-    text-decoration: none;
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: #070707;
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #070707;
 }
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+.login {
+  outline: none;
+  background-color: #6081ab;
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
 .hamburger {
-    position: relative;
-    z-index: 10;
-    cursor: pointer;
-    width: 20px;
-    top: 2px;
-    height: 20px;
-    background: none;
-    border: none;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+  width: 20px;
+  top: 2px;
+  height: 20px;
+  background: none;
+  border: none;
 }
 
 .hamburger-top,
 .hamburger-middle,
 .hamburger-bottom {
-    position: absolute;
-    height: 2px;
-    top: 0;
-    left: 0;
-    background: #000;
+  position: absolute;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: #000;
 }
 .hamburger-top {
-    width: 18px;
+  width: 18px;
 }
 .hamburger-middle {
-    transform: translate(0px, 5px);
-    width: 18px;
+  transform: translate(0px, 5px);
+  width: 18px;
 }
 .hamburger-bottom {
-    transform: translate(0px, 10px);
-    width: 18px;
+  transform: translate(0px, 10px);
+  width: 18px;
 }
 
 /*SECTION CONTACT*/
 .section-contact {
-    background-color: #E6E6E6;
-    padding: 10rem;
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
+  background-color: #e6e6e6;
+  padding: 10rem;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
 }
 
 .contact-intro {
-    background-color: var(--bg-color);
-    padding: 0rem 5rem;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+  background-color: var(--bg-color);
+  padding: 0rem 5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-heading {
-    font-family: 'Overpass', sans-serif;
-    font-size: 4.8rem;
-    font-weight: 400;
-    color: #000000;
-    margin-bottom: 5rem;
+  font-family: "Overpass", sans-serif;
+  font-size: 4.8rem;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 5rem;
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-input , textarea:focus {
-    outline: none;
+input,
+textarea:focus {
+  outline: none;
 }
 
 .input {
-    display: block;
-    width: 41.7rem;
-    height: 4.8rem;
-    padding: 8px 12px;
-    margin-bottom: 3rem;
-    font-size: 1.4rem;
-    color: #000000;
-    background-color: var(--bg-color);
-    border: 2px solid #AAAAAA;
-    border-radius: 4px;
+  display: block;
+  width: 41.7rem;
+  height: 4.8rem;
+  padding: 8px 12px;
+  margin-bottom: 3rem;
+  font-size: 1.4rem;
+  color: #000000;
+  background-color: var(--bg-color);
+  border: 2px solid #aaaaaa;
+  border-radius: 4px;
 }
 
 ::placeholder {
-    color: #000000;
+  color: #000000;
 }
 
 .message-textfield {
-    height: 3.8rem;
+  height: 3.8rem;
 }
 
 .submit-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 11.2rem;
-    height: 4rem;
-    background: #6081AB;
-    border-radius: 4px;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    margin-top: 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 11.2rem;
+  height: 4rem;
+  background: #6081ab;
+  border-radius: 4px;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 10rem;
 }
 
 .contact-img {
-    width: 100%;
+  width: 100%;
 }
 
 div.contact-img > img {
-    width: auto;
-    height: 72rem;
+  width: auto;
+  height: 72rem;
 }
 
 /*FOOTER*/
 footer {
-    padding: 5rem;
-    background-color: var(--footer-color);
+  padding: 5rem;
+  background-color: var(--footer-color);
 }
 
 .footer {
-    
 }
 
 .footer-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7rem;
 }
 
 .footer-text {
-    font-family: 'Overpass', sans-serif;
-    font-weight: 600;
-    font-size: 1.8rem;
-    width: 100%;
-    color: #070707;
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  width: 100%;
+  color: #070707;
 }
 
 .footer-img-holder {
-    width: 100%;
+  width: 100%;
 }
 
 div.footer-img-holder > img {
-    width: auto;
-    height: 8.3rem;
+  width: auto;
+  height: 8.3rem;
 }
 
 .follow-prompt {
-    width: 100%;
+  width: 100%;
 }
 
 .footer-main {
-    font-family: 'Overpass', sans-serif;
-    font-weight: 400;
-    font-size: 1.8rem;
-    width: 100%;
-    color: #070707;
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  width: 100%;
+  color: #070707;
 }
