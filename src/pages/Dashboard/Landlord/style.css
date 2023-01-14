@@ -1,0 +1,35 @@
+.uploaded-houses-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  width: 80%;
+  margin: 30px auto;
+}
+.uploaded-houses-title {
+  text-align: center;
+}
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 8px;
+  border-bottom: 2px solid transparent;
+}
+
+.tab.active {
+  border-bottom: 2px solid blue;
+}
+.upload-form {
+  width: 60%;
+  margin: 30px auto;
+}
+
+@media (max-width: 600px) {
+  .upload-form {
+    width: 90%;
+  }
+}

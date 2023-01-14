@@ -1,0 +1,91 @@
+.form-container {
+  width: 50%;
+  margin: 30px auto;
+  height: 100%;
+}
+.auth-container {
+  height: 100%;
+}
+.auth-overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.auth-container-img-div {
+  position: relative;
+  /* background-image: url("https://media.istockphoto.com/id/483599491/photo/luxury-house-with-swimming-pool-illuminated-at-night.jpg?b=1&s=170667a&w=0&k=20&c=xBnULBoPfr7qdM-c2Ej9AzmqQKlUDPh8OcFmE8_VuM8="); */
+  background-image: url("../../assets//images/auth-img.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+.auth-container-img-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.form-labels {
+  border: 2px solid green;
+}
+.auth-error {
+  color: red;
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+.button-container {
+  margin: 30px 0;
+}
+.button-container p {
+  text-align: center;
+  margin-top: 20px;
+}
+.button-container p a {
+  color: #6081ab;
+}
+.multi-auth {
+  margin: 20px auto;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: 50%;
+}
+.multi-auth div {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  border: 1px solid lightgray;
+  padding: 10px;
+  align-items: center;
+}
+.multi-auth div p {
+  margin-left: 20px;
+}
+.auth-or {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #6081ab;
+  font-weight: bold;
+}
+@media (max-width: 600px) {
+  .auth-container-img-div {
+    height: 200px;
+  }
+  .form-container {
+    width: 90%;
+  }
+  .multi-auth {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+@media (max-width: 960px) {
+  .multi-auth div {
+    justify-content: space-around;
+    width: 80%;
+    padding: 10px 5px;
+    margin: auto;
+  }
+}

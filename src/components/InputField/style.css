@@ -1,0 +1,20 @@
+.inputfield-container {
+  display: flex;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+.inputfield-icon {
+  width: 10%;
+  color: gray !important;
+}
+.inputfield-container input,
+.inputfield-container select,
+.inputfield-container textarea {
+  border: none;
+  outline: none;
+  width: 100%;
+  color: gray;
+  background-color: transparent;
+}
