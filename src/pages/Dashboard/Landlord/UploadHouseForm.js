@@ -60,149 +60,144 @@ const UploadHouseForm = ({ landlord }) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        if (data.success) {
+        if (data.message) {
           setSuccess(true);
-          setTimeout(() => {
-            setSuccess(false);
-          }, 1500);
+          alert("House uploaded successfully");
+          setSuccess(false);
+          setDetails({});
         }
       })
       .catch((error) => {
         console.error("Error:", error);
       });
   };
-  //nafTenant3@rentease.com
   return (
     <div>
-      {success ? (
-        <p>New House Uploaded Successfully</p>
-      ) : (
-        <form onSubmit={uploadHouse} className="upload-form" key={success}>
-          <h3>Upload New House</h3>
-          <InputField
-            // icon={<MdSortByAlpha />}
-            value={details.address}
-            onChange={(event) =>
-              setDetails((prev) => ({
-                ...prev,
-                address: event.target.value,
-              }))
-            }
-            placeholder="Address"
-            name="address"
-          />
-          <InputField
-            // icon={<MdSortByAlpha />}
-            value={details.state}
-            onChange={(event) =>
-              setDetails((prev) => ({
-                ...prev,
-                state: event.target.value,
-              }))
-            }
-            placeholder="State"
-            name="state"
-          />
-          <InputField
-            // icon={<MdSortByAlpha />}
-            value={details.imageUrl}
-            onChange={(event) =>
-              setDetails((prev) => ({
-                ...prev,
-                imageUrl: event.target.value,
-              }))
-            }
-            placeholder="Image Url"
-            name="Image Url"
-          />
-          <InputField
-            // icon={<MdSortByAlpha />}
-            value={details.price}
-            onChange={(event) =>
-              setDetails((prev) => ({
-                ...prev,
-                price: event.target.value,
-              }))
-            }
-            placeholder="Price"
-            name="Price"
-          />
-          <Dropdown
-            // icon={<FaUser />}
-            value={details.model}
-            onChange={(event) =>
-              setDetails((prev) => ({
-                ...prev,
-                model: event.target.value,
-              }))
-            }
-            placeholder={"Model"}
-            options={["Flat", "Bungalow", "2 Story Building"]}
-          />
-          <Dropdown
-            // icon={<FaUser />}
-            value={details.plan}
-            onChange={(event) =>
-              setDetails((prev) => ({
-                ...prev,
-                plan: event.target.value,
-              }))
-            }
-            placeholder={"Payment Plan"}
-            options={["Weekly", "Monthly", "Per Annum"]}
-          />
-          <Dropdown
-            // icon={<FaUser />}
-            value={details.bathrooms}
-            onChange={(event) =>
-              setDetails((prev) => ({
-                ...prev,
-                bathrooms: event.target.value,
-              }))
-            }
-            placeholder={"No of Bathrooms"}
-            options={["1", "2", "3"]}
-          />
-          <Dropdown
-            // icon={<FaUser />}
-            value={details.bedrooms}
-            onChange={(event) =>
-              setDetails((prev) => ({
-                ...prev,
-                bedrooms: event.target.value,
-              }))
-            }
-            placeholder={"No of Bedrooms"}
-            options={["1", "2", "3"]}
-          />
-          <Dropdown
-            // icon={<FaUser />}
-            value={details.parkingSpaces}
-            onChange={(event) =>
-              setDetails((prev) => ({
-                ...prev,
-                parkingSpaces: event.target.value,
-              }))
-            }
-            placeholder={"No of Packing Spaces"}
-            options={["1", "2", "3"]}
-          />
-          <InputField
-            // icon={<MdSortByAlpha />}
-            textArea
-            value={details.description}
-            onChange={(event) =>
-              setDetails((prev) => ({
-                ...prev,
-                description: event.target.value,
-              }))
-            }
-            placeholder="Description"
-            name="Description"
-          />
-          <Button text="Upload" type="submit" solid />
-        </form>
-      )}
+      <form onSubmit={uploadHouse} className="upload-form" key={success}>
+        <h3>Upload New House</h3>
+        <InputField
+          // icon={<MdSortByAlpha />}
+          value={details.address}
+          onChange={(event) =>
+            setDetails((prev) => ({
+              ...prev,
+              address: event.target.value,
+            }))
+          }
+          placeholder="Address"
+          name="address"
+        />
+        <InputField
+          // icon={<MdSortByAlpha />}
+          value={details.state}
+          onChange={(event) =>
+            setDetails((prev) => ({
+              ...prev,
+              state: event.target.value,
+            }))
+          }
+          placeholder="State"
+          name="state"
+        />
+        <InputField
+          // icon={<MdSortByAlpha />}
+          value={details.imageUrl}
+          onChange={(event) =>
+            setDetails((prev) => ({
+              ...prev,
+              imageUrl: event.target.value,
+            }))
+          }
+          placeholder="Image Url"
+          name="Image Url"
+        />
+        <InputField
+          // icon={<MdSortByAlpha />}
+          value={details.price}
+          onChange={(event) =>
+            setDetails((prev) => ({
+              ...prev,
+              price: event.target.value,
+            }))
+          }
+          placeholder="Price"
+          name="Price"
+        />
+        <Dropdown
+          // icon={<FaUser />}
+          value={details.model}
+          onChange={(event) =>
+            setDetails((prev) => ({
+              ...prev,
+              model: event.target.value,
+            }))
+          }
+          placeholder={"Model"}
+          options={["Flat", "Bungalow", "2 Story Building"]}
+        />
+        <Dropdown
+          // icon={<FaUser />}
+          value={details.plan}
+          onChange={(event) =>
+            setDetails((prev) => ({
+              ...prev,
+              plan: event.target.value,
+            }))
+          }
+          placeholder={"Payment Plan"}
+          options={["Weekly", "Monthly", "Per Annum"]}
+        />
+        <Dropdown
+          // icon={<FaUser />}
+          value={details.bathrooms}
+          onChange={(event) =>
+            setDetails((prev) => ({
+              ...prev,
+              bathrooms: event.target.value,
+            }))
+          }
+          placeholder={"No of Bathrooms"}
+          options={["1", "2", "3"]}
+        />
+        <Dropdown
+          // icon={<FaUser />}
+          value={details.bedrooms}
+          onChange={(event) =>
+            setDetails((prev) => ({
+              ...prev,
+              bedrooms: event.target.value,
+            }))
+          }
+          placeholder={"No of Bedrooms"}
+          options={["1", "2", "3"]}
+        />
+        <Dropdown
+          // icon={<FaUser />}
+          value={details.parkingSpaces}
+          onChange={(event) =>
+            setDetails((prev) => ({
+              ...prev,
+              parkingSpaces: event.target.value,
+            }))
+          }
+          placeholder={"No of Packing Spaces"}
+          options={["1", "2", "3"]}
+        />
+        <InputField
+          // icon={<MdSortByAlpha />}
+          textArea
+          value={details.description}
+          onChange={(event) =>
+            setDetails((prev) => ({
+              ...prev,
+              description: event.target.value,
+            }))
+          }
+          placeholder="Description"
+          name="Description"
+        />
+        <Button text="Upload" type="submit" solid />
+      </form>
     </div>
   );
 };
