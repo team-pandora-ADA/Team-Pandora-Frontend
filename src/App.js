@@ -8,14 +8,16 @@ import LandlordDashboard from "./pages/Dashboard/Landlord/LandlordDashboard";
 import TenantDashboard from "./pages/Dashboard/Tenant/TenantDashboard";
 import Home from "./pages/Home";
 import Properties from "./pages/Properties";
+import PropertyDetails from "./pages/PropertyDetails";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<RegisterPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/property-details" element={<PropertyDetails />} />
         <Route path="/tenant-login" element={<TenantLogin />} />
         <Route path="/landlord-login" element={<LandlordLogin />} />
         <Route path="/landlord-dashboard" element={<LandlordDashboard />} />

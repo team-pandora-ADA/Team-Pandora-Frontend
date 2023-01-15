@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import HouseCard from "../../components/HouseCard.js";
 import Dropdown from "../../components/InputField/Dropdown.js";
 import InputField from "../../components/InputField/index.js";
@@ -7,6 +8,7 @@ import { BASE_URL } from "../../services";
 import "./style.css";
 
 const Properties = () => {
+  const navigate = useNavigate();
   const [houses, setHouses] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   useEffect(() => {
@@ -26,7 +28,10 @@ const Properties = () => {
         console.error("Error:", error);
       });
   }, []);
-
+  const navigateToDetails = (house) => {
+    localStorage.setItem("currentHouse", JSON.stringify(house));
+    navigate("/property-details");
+  };
   return (
     <>
       <Navbar />
@@ -88,10 +93,12 @@ const Properties = () => {
           </div>
         </div>
         <div>
-          {houses.length && (
+          {houses.length > 0 ? (
             <h4 className="properties-list-title">
               1-{houses.length} available for rent in Lagos
             </h4>
+          ) : (
+            <h4>Loading</h4>
           )}
           <div className="uploaded-houses-container">
             {houses
@@ -99,7 +106,9 @@ const Properties = () => {
                 (a, b) => new Date(b.uploadedDate) - new Date(a.uploadedDate)
               )
               .map((house) => (
-                <HouseCard house={house} key={house._id} />
+                <div onClick={() => navigateToDetails(house)} key={house._id}>
+                  <HouseCard house={house} />
+                </div>
               ))}
           </div>
         </div>
