@@ -68,20 +68,6 @@ const UploadedHouses = ({ landlord }) => {
       });
   }, []);
 
-  // let house = {
-  //   _id: "63c15947d1f0a39133283544",
-  //   title: "A fully furnished house with 24hrs electricity",
-  //   address: "Ojota market",
-  //   state: "Lagos",
-  //   model: "Bungalow",
-  //   plan: "Weekly",
-  //   description: "A cool house in a serene environment",
-  //   uploadedDate: "2023-01-09T06:02:22.500Z",
-  //   id: "63c13bbff5ee4a7af535506a",
-  //   imageUrl:
-  //     "https://www.condoblackbook.com/media/3873/the-ritz-carlton-residences-miami-beach.png?anchor=center&mode=crop&width=800&height=535&rnd=132652957070000000",
-  //   __v: 0,
-  // };
   return (
     <div className="uploaded-houses">
       <h2 className="uploaded-houses-title">Uploaded Houses</h2>

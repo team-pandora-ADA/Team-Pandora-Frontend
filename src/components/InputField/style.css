@@ -18,3 +18,13 @@
   color: gray;
   background-color: transparent;
 }
+.inputfield-container select {
+  cursor: pointer;
+}
+.dropdown-label {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: 0.8rem;
+}

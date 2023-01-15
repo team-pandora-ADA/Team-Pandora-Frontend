@@ -1,8 +1,24 @@
 .house-card {
+  font-weight: 600;
   width: 250px;
-  height: 400px;
+  height: 460px;
   border-radius: 10px;
   background-color: #f0f0f0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 1px 1px 2px lightgray;
+}
+
+.house-card-border {
+  transition: all 0.3s ease;
+}
+.house-card-border:hover {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #6081ab;
+}
+.house-card-border:hover .house-card {
+  transform: scale(1.005);
 }
 .house-card-img-container {
   width: 100%;
@@ -16,12 +32,20 @@
   display: flex;
   justify-content: space-between;
   padding: 20px 10px;
-  font-weight: bold;
+  text-align: center;
+}
+.house-card-listings svg {
+  font-size: 30px;
+}
+.house-card-listings div {
 }
 .house-card-details {
   padding: 20px 10px;
 }
-
+.house-card-details > * {
+  margin-top: 15px;
+}
 .house-price {
-  color: #bac6d6;
+  color: #6081ab;
+  font-size: xx-large;
 }

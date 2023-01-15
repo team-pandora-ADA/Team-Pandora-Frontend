@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import LandlordDashboard from "./pages/Dashboard/Landlord/LandlordDashboard";
 import TenantDashboard from "./pages/Dashboard/Tenant/TenantDashboard";
 import Home from "./pages/Home";
+import Properties from "./pages/Properties";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/tenant-login" element={<TenantLogin />} />
         <Route path="/landlord-login" element={<LandlordLogin />} />
         <Route path="/landlord-dashboard" element={<LandlordDashboard />} />
+        <Route path="/properties" element={<Properties />} />
         <Route path="/tenant-dashboard" element={<TenantDashboard />} />
         <Route path="/register" element={<RegisterPage />} />
       </Routes>

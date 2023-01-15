@@ -43,9 +43,8 @@ const TenantLogin = () => {
               details: data.data.user,
             })
           );
-          setTimeout(() => {
-            navigate("/tenant-dashboard");
-          }, 2000);
+
+          navigate("/properties");
         } else setError(data.error);
       })
       .catch((error) => {
