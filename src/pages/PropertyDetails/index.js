@@ -73,11 +73,11 @@ const PropertyDetails = () => {
             </div>
             <div className="agreement-details-details">
               <p>Tenant Name:</p>
-              <p>{tenant.details.name}</p>
+              <p>{tenant?.details?.name}</p>
             </div>
             <div className="agreement-details-details">
               <p>Tenant Email:</p>
-              <p>{tenant.details.email}</p>
+              <p>{tenant?.details?.email}</p>
             </div>
             <div className="agreement-details-details">
               <p>Payment Mode:</p>
