@@ -1,0 +1,60 @@
+.properties-filter-container {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  gap: 30px;
+  align-items: center;
+  padding: 0 30px;
+}
+.properties-container-img-div {
+  position: relative;
+  background-image: url("../../assets//images/auth-img.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+.properties-filter-container {
+  display: flex;
+}
+.properties-filter-container-flex {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+.properties-filter-container-flex > div {
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.properties-overlay {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.4);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.properties-list-title {
+  margin: 20px 15px;
+}
+
+@media (max-width: 600px) {
+  .properties-container-img-div {
+    height: 340px;
+  }
+  .properties-filter-container-flex {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .properties-filter-container {
+    bottom: 20px;
+    padding: 0 5px;
+  }
+}

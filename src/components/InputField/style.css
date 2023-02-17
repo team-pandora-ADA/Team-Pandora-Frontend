@@ -1,0 +1,30 @@
+.inputfield-container {
+  display: flex;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+.inputfield-icon {
+  width: 10%;
+  color: gray !important;
+}
+.inputfield-container input,
+.inputfield-container select,
+.inputfield-container textarea {
+  border: none;
+  outline: none;
+  width: 100%;
+  color: gray;
+  background-color: transparent;
+}
+.inputfield-container select {
+  cursor: pointer;
+}
+.dropdown-label {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: 0.8rem;
+}
